@@ -19,10 +19,34 @@ body {
   margin: 0;
   padding: 0;
   font-weight: bold;
-  font-family: "ヒラギノ明朝 ProN", "Hiragino Mincho Pro";
-  padding-bottom: 60px;
+  font-family: "ヒラギノ明朝 ProN", "Hiragino Mincho Pro", serif;
+  padding-bottom: 80px;
 }
 
+p,
+h1,
+h3,
+h4 {
+  margin: 0;
+}
+
+p {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
 
 .header-container {
   display: flex;
@@ -30,6 +54,7 @@ body {
   align-items: center;
   gap: 20px;
   padding: 30px 0;
+  justify-content: center;
 }
 
 .nav-list {
@@ -39,29 +64,186 @@ body {
   gap: 30px;
 }
 
-.container {
-  color: #00124e;
+.menu-nav {
+  justify-content: center;
+  color: #000;
+}
+
+#home,
+#profile,
+#works,
+#contact {
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
   width: 100%;
-  min-height: 600px;
-  padding: 10px;
+  margin: 0 auto;
+}
+
+#profile,
+#works,
+#contact {
+  max-width: 1000px;
+}
+
+#home {
+  max-width: none;
   position: relative;
-  overflow: hidden;
+}
+
+#profile-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+#works {
+  text-align: center;
+}
+
+.works-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+  flex-wrap: wrap;
+}
+
+.works-item img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+#tenki-icon,
+.works-img {
+  max-width: 500px !important;
+  width: 100%;
+  height: auto;
+}
+
+.works-item:last-of-type {
+  margin-bottom: 0;
+}
+
+#works img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.works-img {
+  max-width: 500px !important;
+  width: 100%;
+  height: auto;
+}
+
+#tenki-icon,
+.works-img {
+  max-width: 500px !important;
+  width: 100%;
+  height: auto;
+}
+
+.works-text h2 {
+  font-size: 22px;
+  color: rgb(24, 41, 90);
+  margin-bottom: 15px;
+}
+
+.works-text {
+  flex: 1;
+  min-width: 280px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.works-text p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #00124e;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container p {
-  position: absolute;
-  top: 150px;
-  left: 50px;
-  font-size: 120px;
-  transform-origin: left top;
-  transform: rotate(-30deg);
+  font-size: 9vw;
   color: rgb(24, 41, 90);
   margin: 0;
+  white-space: nowrap;
+  transform-origin: center center;
+  transform: rotate(-30deg);
 }
 
-.menu-nav {
-  justify-self: right;
-  color: #000;
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.flex-container img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.flex-container h3 {
+  font-size: 24px;
+  color: rgb(24, 41, 90);
+  margin-bottom: 10px;
+}
+
+.flex-container h4 {
+  font-size: 16px;
+  color: #555;
+  font-weight: normal;
+}
+
+#works {
+  text-align: center;
+}
+
+#works img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 40px auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+img[src*="流しそうめん"] {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
 }
 
 footer {
@@ -72,4 +254,5 @@ footer {
   text-align: center;
   color: #ffffff;
   padding: 15px 0;
+  z-index: 100;
 }

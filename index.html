@@ -7,33 +7,76 @@
   <title>平野紹介</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
-
 </head>
 
-
 <body>
-  <header>
-    <div class="header-container">
-      <ul>
-        <li>
-          <h1 class="text"><a href="index.html"></a>Portfolio</h1>
-        </li>
-      </ul>
-      <nav class="menu-nav">
-        <ul class="nav-list">
-          <li><a href="profile.html">profile</a></li>
-          <li><a href="works.html">works</a></li>
-          <li><a href="favorites.html">favorites</a></li>
-        </ul>
-      </nav>
-    </div>
 
-  </header>
   <main>
-    <div class="container">
-      <p class="container p">Portfolio</p>
-    </div>
+
+    <section id="home">
+      <header>
+        <div class="header-container">
+          <h1 class="text"><a href="#home">Portfolio</a></h1>
+          <nav class="menu-nav">
+            <ul class="nav-list">
+              <li><a href="#profile">profile</a></li>
+              <li><a href="#works">works</a></li>
+              <li><a href="#contact">contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <div class="container">
+        <p>Portfolio</p>
+      </div>
+    </section>
+
+    <section id="profile">
+      <h1>profile</h1>
+      <div class="flex-container">
+        <img src="images/icon.png" alt="アイコン">
+        <div class="profile-text">
+          <h3>平野</h3>
+          <h4>九州産業大学　芸術学部　ソーシャルデザイン学科　在籍中</h4>
+        </div>
+      </div>
+    </section>
+
+    <section id="works">
+      <h1>works</h1>
+      <div class="works-item">
+        <img id="tenki-icon" src="images/tenkiicon.gif" alt="天気アイコン" width="500" height="300">
+        <div class="works-text">
+          <h2>天気アイコン</h2>
+          <p>使用ソフト：Adobe After Effect</p>
+        </div>
+      </div>
+      <script>
+        document.getElementById('tenki-icon').addEventListener('click', function () {
+          if (this.src.includes('tenkiicon.gif')) {
+            this.src = 'images/paused.gif';
+          } else {
+            this.src = 'images/tenkiicon.gif';
+          }
+        });
+      </script>
+
+      <div class="works-item">
+        <img src="images/25AS019平野雅華_課題6_流しそうめん.png" alt="流しそうめんの課題画像" class="works-img">
+        <div class="works-text">
+          <h2>流しそうめん</h2>
+          <p>使用ソフト：Adobe illustrator<br>「流しそうめん」をテーマにした作品です。構図や色彩にこだわり、季節感あふれるデザインに仕上げました。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h1>contact</h1>
+      <p>✉️ k25as019@st.kyusan-u.ac.jp</p>
+    </section>
   </main>
+
   <footer>
     <p>&copy;2026 平野</p>
   </footer>
